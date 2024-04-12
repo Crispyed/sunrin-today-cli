@@ -1,0 +1,35 @@
+{
+    "name": "sunrin-instagram-cli",
+    "version": "1.0.0",
+    "description": "School info Instagram Uploader CLI",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dist/school.js",
+        "build": "npx tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sunrin-project/instagram-cli.git"
+    },
+    "author": "iamfiro",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sunrin-project/instagram-cli/issues"
+    },
+    "homepage": "https://github.com/sunrin-project/instagram-cli#readme",
+    "dependencies": {
+        "@inquirer/select": "^2.2.2",
+        "chalk": "^5.3.0",
+        "commander": "^12.0.0",
+        "figlet": "^1.7.0",
+        "inquirer": "^9.2.17",
+        "node-fetch": "^2.6.1"
+    },
+    "devDependencies": {
+        "@types/figlet": "^1.5.8",
+        "@types/inquirer": "^9.0.7",
+        "@types/node": "^20.12.7",
+        "typescript": "^5.4.5"
+    },
+    "type": "module"
+}
