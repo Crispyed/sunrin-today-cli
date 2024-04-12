@@ -2,7 +2,3 @@
 /dist
 /json
 /config
-.DS_Store
-.git*
-.idea
-.vscode
