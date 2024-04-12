@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import chalk from "chalk";
 import select from '@inquirer/select';
 import { Command } from "commander";
