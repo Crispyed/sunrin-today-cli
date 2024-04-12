@@ -75,7 +75,7 @@ npm i sunrin-instagram-cli
 <br/>
 
 > 급식 데이터 생성하기<br/>
-> 현재 설정된 급식 리스트를 불러옵니다
+> 급식 데이터를 JSON에 생성합니다
 
 ```bash
 > sunrin-instagram-cli add
@@ -89,7 +89,7 @@ Added!
 
 <br/>
 
-> 급식 삭제<br/>
+> 급식 데이터 삭제<br/>
 > 현재 설정된 급식중의 일부를 삭제합니다
 ```bash
 > sunrin-instagram-cli delete
