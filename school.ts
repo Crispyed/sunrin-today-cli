@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+"use strict"
 import chalk from "chalk";
 import select from '@inquirer/select';
 import { Command } from "commander";
@@ -8,6 +8,7 @@ import fs from "fs";
 
 function makeConfigFile(schoolName: string, instagramId: string, instagramPassword: string, discordWebhook: string | null) {
     !fs.existsSync("./config") && fs.mkdirSync("./config");
+    !fs.existsSync("./json") && fs.mkdirSync("./json");
 
     fs.writeFileSync("./config/config.js", `export const config = {
     schoolName: '${schoolName}',
@@ -158,33 +159,32 @@ program.command('delete')
 program.command('add')
     .description('급식을 추가합니다')
     .action(async () => {
-        if(!fs.existsSync("./config")) {
-            return console.log(chalk.red("meal.json file not found!\nFirst run the `school add` command."));
-        } else {
-            inquirer
-                .prompt([
-                    {
-                        name: "date",
-                        type: "input",
-                        message: `What is the ${chalk.cyan("date")} of the meal? ${chalk.gray("»")}`,
-                    },
-                    {
-                        name: "meal",
-                        type: "input",
-                        message: `What is the ${chalk.cyan("meal")} of the day ${chalk.blue("seperate to /")}? ${chalk.gray("»")}`,
-                    },
-                ]).then(async (answers) => {
-                    const json = fs.existsSync("./json/meal.json") ? JSON.parse(fs.readFileSync("./json/meal.json", 'utf-8')) : [];
-                    if(json.find((meal: any) => meal.date === answers.date)) {
-                        console.log(chalk.red("Already exists date!"));
-                        return;
-                    }
-                    answers.meal = answers.meal.split("/");
-                    json.push(answers);
-                    fs.writeFileSync("./json/meal.json", JSON.stringify(json), 'utf-8');
-                    console.log(chalk.green("Added!"));
-                })
-        }
+        !fs.existsSync("./json") && fs.mkdirSync("./json");
+        !fs.existsSync("./json/meal.json") && fs.writeFileSync("./json/meal.json", "[]", 'utf-8');
+        
+        inquirer
+            .prompt([
+                {
+                    name: "date",
+                    type: "input",
+                    message: `What is the ${chalk.cyan("date")} of the meal? ${chalk.gray("»")}`,
+                },
+                {
+                    name: "meal",
+                    type: "input",
+                    message: `What is the ${chalk.cyan("meal")} of the day ${chalk.blue("seperate to /")}? ${chalk.gray("»")}`,
+                },
+            ]).then(async (answers) => {
+                const json = fs.existsSync("./json/meal.json") ? JSON.parse(fs.readFileSync("./json/meal.json", 'utf-8')) : [];
+                if(json.find((meal: any) => meal.date === answers.date)) {
+                    console.log(chalk.red("Already exists date!"));
+                    return;
+                }
+                answers.meal = answers.meal.split("/");
+                json.push(answers);
+                fs.writeFileSync("./json/meal.json", JSON.stringify(json), 'utf-8');
+                console.log(chalk.green("Added!"));
+            })
     })
 
 program.parse(process.argv);

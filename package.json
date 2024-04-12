@@ -1,8 +1,8 @@
 {
     "name": "sunrin-instagram-cli",
-    "version": "1.0.0",
+    "version": "1.0.9",
     "description": "School info Instagram Uploader CLI",
-    "main": "index.js",
+    "main": "dist/school.js",
     "scripts": {
         "start": "node dist/school.js",
         "build": "npx tsc"
@@ -26,10 +26,16 @@
         "node-fetch": "^2.6.1"
     },
     "devDependencies": {
+        "@babel/cli": "^7.24.1",
+        "@babel/core": "^7.24.4",
+        "@babel/preset-env": "^7.24.4",
         "@types/figlet": "^1.5.8",
         "@types/inquirer": "^9.0.7",
         "@types/node": "^20.12.7",
         "typescript": "^5.4.5"
     },
-    "type": "module"
+    "type": "module",
+    "bin": {
+        "school": "dist/school.js"
+    }
 }
