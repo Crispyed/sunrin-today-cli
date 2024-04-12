@@ -19,8 +19,9 @@
 2. [파일 / 폴더 구조](#folder)
 3. [개발자](#developer)
 4. [문의](#contact)
-5. [사용법](#howto)
-5. [트러블 슈팅](#trouble)
+5. [설치 방법](#install)
+6. [사용법](#howto)
+7. [트러블 슈팅](#trouble)
 
 ## 🔍 개발 기술 <a id="tech"></a>
 `Typescript` - Javascript에 **Type**기능을 추가한 언어<br/>
@@ -52,7 +53,12 @@ school.ts - CLI 코드가 들어있는 중요한 파일
 <a href="https://www.instagram.com/sunrin_life/"><img style="border-radius: 4px" src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/sunrin_today/"/></a>
 > **@sunrin_today** - 인스타그램
 
-## 📎 사용법
+## 📦 설치 방법 <a id="install"></a>
+```bash
+npm i sunrin-instagram-cli
+```
+
+## 📎 사용법 <a id="howto"></a>
 > 급식 리스트 불러오기<br/>
 > 현재 설정된 급식 리스트를 불러옵니다
 
