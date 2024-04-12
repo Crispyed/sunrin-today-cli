@@ -25,7 +25,6 @@
 
 ## 🔍 개발 기술 <a id="tech"></a>
 `Typescript` - Javascript에 **Type**기능을 추가한 언어<br/>
-`Python` - 학교 정보 관련 이미지 생성<br/>
 
 `Spotify` - ~~개발을 하기위한 나의 레드불~~
 
