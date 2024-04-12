@@ -63,7 +63,7 @@ npm i sunrin-instagram-cli
 > ㄴ 현재 설정된 급식 리스트를 불러옵니다
 
 ```bash
-> sunrin-instagram-cli list
+> npx sunrin-instagram-cli list
 
 결과
 2024-01-02
@@ -78,7 +78,7 @@ npm i sunrin-instagram-cli
 > ㄴ 급식 데이터를 JSON에 생성합니다
 
 ```bash
-> sunrin-instagram-cli add
+> npx sunrin-instagram-cli add
 
 결과
 ? What is the date of the meal? » 2024-04-13
@@ -92,7 +92,7 @@ Added!
 > 급식 데이터 삭제<br/>
 > ㄴ 현재 설정된 급식중의 일부를 삭제합니다
 ```bash
-> sunrin-instagram-cli delete
+> npx sunrin-instagram-cli delete
 
 결과
 ? Please select the item you want to delete
