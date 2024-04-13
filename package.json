@@ -1,6 +1,6 @@
 {
     "name": "sunrin-instagram-cli",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "description": "School info Instagram Uploader CLI",
     "main": "dist/school.js",
     "scripts": {
@@ -36,6 +36,6 @@
     },
     "type": "module",
     "bin": {
-        "school": "dist/school.js"
+        "sic": "dist/school.js"
     }
 }
