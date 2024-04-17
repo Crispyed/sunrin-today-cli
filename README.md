@@ -29,7 +29,7 @@
 `Spotify` - ~~개발을 하기위한 나의 레드불~~
 
 ## 📂 파일 / 폴더 구조 <a id="folder"></a>
-- 앱 (**React Native**)
+- CLI (**Javascript**)
 ```
 .gitignore - Github에 올라가면 안되는 파일을 적어둔 파일 (예시: .env 파일)
 
@@ -58,11 +58,25 @@ npm i sunrin-instagram-cli
 ```
 
 ## 📎 사용법 <a id="howto"></a>
+> 인스타그램 자동 업로드 세팅<br/>
+> ㄴ 프로젝트 초기에 인스타그램 자동 업로드 Config를 세팅합니다
+```bash
+> npx sic init
+
+? What is your school named? » 선린인터넷고등학교
+? What is your instagram id for upload? » 인스타그램 계정 ID
+? What is your instagram password for upload? » 인스타그램 계정 PW
+? Would you like to use Discord Webhook for logging? » Yes
+? What is your discord webhook URL? » URL
+
+Config file created!
+```
+
 > 급식 리스트 불러오기<br/>
 > ㄴ 현재 설정된 급식 리스트를 불러옵니다
 
 ```bash
-> npx sunrin-instagram-cli list
+> npx sic list
 
 결과
 2024-01-02
@@ -77,7 +91,7 @@ npm i sunrin-instagram-cli
 > ㄴ 급식 데이터를 JSON에 생성합니다
 
 ```bash
-> npx sunrin-instagram-cli add
+> npx sic add
 
 결과
 ? What is the date of the meal? » 2024-04-13
@@ -91,7 +105,7 @@ Added!
 > 급식 데이터 삭제<br/>
 > ㄴ 현재 설정된 급식중의 일부를 삭제합니다
 ```bash
-> npx sunrin-instagram-cli delete
+> npx sic delete
 
 결과
 ? Please select the item you want to delete
